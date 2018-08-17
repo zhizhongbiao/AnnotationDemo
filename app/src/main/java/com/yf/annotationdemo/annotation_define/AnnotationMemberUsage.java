@@ -15,4 +15,10 @@ package com.yf.annotationdemo.annotation_define;
  */
 @AnnotationTest(name = "alv_chi",age = 25)
 public class AnnotationMemberUsage {
+
+
+
+    //展示注解使用在类的变量上，其实跟使用在类上一样的；
+    @AnnotationInTheVariation(sayHello = "hi")
+    public int temp=-1;
 }
