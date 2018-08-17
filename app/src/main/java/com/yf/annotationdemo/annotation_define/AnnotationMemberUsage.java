@@ -10,6 +10,8 @@ package com.yf.annotationdemo.annotation_define;
 
 /**
  * 此处展示给class类AnnotationMemberUsage使用AnnotationTest注解，并给注解的成员变量赋值；
+ * 如果注解部分或者全部的成员变量设置了默认值，在使用该注解时候可以不给成员变量赋值，
+ * 就是括号部分不要了
  */
 @AnnotationTest(name = "alv_chi",age = 25)
 public class AnnotationMemberUsage {
