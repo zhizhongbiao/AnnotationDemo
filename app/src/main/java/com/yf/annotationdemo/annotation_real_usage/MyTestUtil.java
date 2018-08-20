@@ -30,7 +30,7 @@ public class MyTestUtil {
             if (annotationPresent) {
                 try {
                     declaredMethod.setAccessible(true);
-                    declaredMethod.invoke(waitForMycheck,null);
+                    declaredMethod.invoke(waitForMycheck,new Object[]{});
                 } catch (Exception e) {
                     errorNum++;
                     log.append(declaredMethod.getName());
