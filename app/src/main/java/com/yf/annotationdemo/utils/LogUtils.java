@@ -1,4 +1,4 @@
-package com.yf.annotationdemo;
+package com.yf.annotationdemo.utils;
 
 import android.util.Log;
 

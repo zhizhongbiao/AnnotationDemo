@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.yf.annotationdemo.annotation_real_usage.MyTestUtil;
 import com.yf.annotationdemo.annotation_usage.Poor;
 import com.yf.annotationdemo.annotation_usage.Student;
 import com.yf.annotationdemo.annotation_usage.SubjectType;
+import com.yf.annotationdemo.utils.LogUtils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-
-import javax.security.auth.Subject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,7 +26,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+//        demo();
+        test();
+    }
 
+    private void test() {
+        MyTestUtil myTestUtil = new MyTestUtil();
+        myTestUtil.testCode();
+    }
+
+    private void demo() {
         boolean hasPoorAnnotation = Student.class.isAnnotationPresent(Poor.class);
         LogUtils.e("hasPoorAnnotation=" + hasPoorAnnotation);
         if (hasPoorAnnotation) {
